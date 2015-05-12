@@ -58,7 +58,7 @@ Version: 1.1
 		height: 500px;
 	}
 	
-	.header { border-bottom: solid 1px #e1e1e1; }
+	.header { border-bottom: solid 1px #404041; }
 	.header .go,
 	.dropmenu .social li,
 	.dropmenu .menu li,
@@ -82,7 +82,7 @@ Version: 1.1
 		display: inline-block;
 	}
 	.header .logo a span { 
-		background: url(http://i.imgur.com/57KwEVF.png) no-repeat 0 0;
+		background: url(http://i.imgur.com/EbF7l7u.png) no-repeat 0 0;
 		display: block;
 		width: 290px;
 		height: 46px;
