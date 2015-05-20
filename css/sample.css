@@ -10,6 +10,9 @@ Version: 1.1
 	.bez { -ms-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
 	.spin { -webkit-animation-name: spin; -webkit-animation-duration: 1000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin; -moz-animation-duration: 1000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin; -ms-animation-duration: 1000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; animation-name: spin; animation-duration: 1000ms; animation-iteration-count: infinite; animation-timing-function: linear; } @-ms-keyframes spin { from { -ms-transform: rotate(0deg); } to { -ms-transform: rotate(360deg); } } @-moz-keyframes spin { from { -moz-transform: rotate(0deg); } to { -moz-transform: rotate(360deg); } } @-webkit-keyframes spin { from { -webkit-transform: rotate(0deg); } to { -webkit-transform: rotate(360deg); } } @keyframes spin { from { transform:rotate(0deg); } to { transform:rotate(360deg); } }
 	
+
+	}
+
 	#WRAPPER { 
 		width: 100%; 
 		min-height: 100%; 
@@ -36,18 +39,19 @@ Version: 1.1
 		letter-spacing: 1px; 
 	}
 	
-	.posts .post a .overlay span, .postnav li span.empty { color: #cccccc; }
+	.posts .post a .overlay span, .postnav li span.empty { color: #04041; }
 	.menu li a, .footer .legal, .more a, body.notouch .more a:hover, .dropmenu .address #mce-EMAIL, .dropmenu .send #mc-embedded-subscribe, .loading { color: #888888; }
 	.project.meta .wrap .summary p, .page .wrap p { color: #666666; }
-	body, a, .icon, .icon a, .icon .fauxlink, h2, h3, h4, body.notouch .menu li a:hover { color: #444444; }
+	body, a, .icon, .icon a, .icon .fauxlink, h2, h3, h4, body.notouch .menu li a:hover { color: #ffffff; }
 	body.notouch a:hover, .menu li.live a, body.notouch .menu li.live a:hover, body.notouch .project.meta .wrap a:hover, body.notouch .page .wrap a:hover { color: #222222; }
 	.project.meta .share a .icon { color: #ffffff; }
 	body.notouch .project.meta .wrap a:hover, body.notouch .page .wrap a:hover { color: #CC5E5E; }
-	.white, body.notouch .dropmenu .social a:hover, body.notouch .dropmenu .send #mc-embedded-subscribe:hover, body.notouch .more a:hover, body.notouch .postnav a:hover, body.notouch .project.meta .share a:hover, .footer .social a, .footer .social .fauxlink, .posts .post a .overlay { background-color: #ffffff; }
-	body, .ultralight, .dropmenu .send #mc-embedded-subscribe, .project.meta .share a, .dropmenu .social a, .posts .post.latest .wrap, .posts .post.latebig .wrap, .more a, .postnav li a, .postnav li span.empty, body.notouch .footer .social a:hover, body.notouch .footer .social .fauxlink:hover, .loading, .posts.related .post a .overlay { background-color: #f2f2f2; }
+	.dark-gray, body.notouch .dropmenu .social a:hover, body.notouch .dropmenu .send #mc-embedded-subscribe:hover, body.notouch .more a:hover, body.notouch .postnav a:hover, body.notouch .project.meta .share a:hover, .footer .social a, .footer .social .fauxlink, .posts .post a .overlay { background-color: #404041;}
+	body, .ultralight, .dropmenu .send #mc-embedded-subscribe, .project.meta .share a, .dropmenu .social a, .posts .post.latest .wrap, .posts .post.latebig .wrap, .more a, .postnav li a, .postnav li span.empty, body.notouch .footer .social a:hover, body.notouch .footer .social .fauxlink:hover, .loading, .posts.related .post a .overlay { background-color: #B5B5B5; }
 	.light, .posts .post, .project.meta .share a { background-color: #d9d9d9; }
-	.more .inner div, .postnav li, .footer .social { background-color: #e1e1e1; }
+	.more .inner div, .postnav li, .footer .social { background-color: #cccccc; }
 	body.notouch .project.meta .share a:hover { background-color: #bbbbbb; }
+	.gray{background-color: #D9D9D9;}
 	
 	.col75 { width: 75%; } .col66 { width: 66.66%; } .col50 { width: 50%; font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; } .col33 { width: 33.33%; } .col25 { width: 25%; } 
 	.postnav li.col33, .dropmenu .social, .dropmenu #mc_embed_signup { width: 33%; font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
@@ -73,10 +77,10 @@ Version: 1.1
 	.push,
 	footer,
 	.footer { 
-		height: 86px;
+		height: 100px;
 	}
 	.header .logo h1 {
-		padding: 20px 0;
+		padding: 12px 0;
 	}
 	.header .logo a {
 		display: inline-block;
@@ -85,7 +89,7 @@ Version: 1.1
 		background: url(http://i.imgur.com/EbF7l7u.png) no-repeat 0 0;
 		display: block;
 		width: 290px;
-		height: 46px;
+		height: 78px;
 	}
 	.header .go { 
 		font-size: 18px;
@@ -355,6 +359,7 @@ Version: 1.1
 	.postnav li.prev a,
 	.postnav li.prev span.empty{
 		margin: 0 0 0 1px;
+
 	}
 
 /* ------------------------------------------------------------------------------------------------	
