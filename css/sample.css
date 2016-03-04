@@ -34,9 +34,13 @@ Version: 1.1
 	input { 
 		font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 		font-weight: 300; 
-		font-size: 14px; 
+		font-size: 14px;
 		line-height: 27px; 
 		letter-spacing: 1px; 
+	}
+	h1{
+		font-size: 18px;
+		font-weight: 500;
 	}
 	
 	.posts .post a .overlay span, .postnav li span.empty { color: #04041; }
@@ -177,7 +181,7 @@ Version: 1.1
 ------------------------------------------------------------------------------------------------ */	
 	
 	.posts .container .inner {
-		padding: 40px 40px 30px 30px;
+		padding: 40px 40px 30px 30px; 
 	}
 	.posts.related .container .inner {
 		padding: 0 40px;
@@ -243,8 +247,8 @@ Version: 1.1
 		
 	}
 	.header .inner, .dropmenu .inner, .project .inner, .postnav .inner, .footer .inner{
-		margin-left:70px;
-		margin-right:70px;
+		margin-left:7%;
+		margin-right:7%;
 	}
 	.loading {
 		font-size: 22px;
@@ -557,10 +561,10 @@ Version: 1.1
     }
 
     #ninja-slider div.content img {
-        display:none;
+        /*display:none;*/
     }
     #ninja-slider-prev, #ninja-slider-next {
-        display:none;
+        /*display:none;*/
     }
 }
 
