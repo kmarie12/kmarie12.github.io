@@ -65,8 +65,8 @@ Version: 1.1
 	.project.meta .share a .icon { color: #ffffff; }
 	body.notouch .project.meta .wrap a:hover, body.notouch .page .wrap a:hover { color: #CC5E5E; }
 	.dark-gray, body.notouch .dropmenu .social a:hover, body.notouch .dropmenu .send #mc-embedded-subscribe:hover, body.notouch .more a:hover, body.notouch .postnav a:hover, body.notouch .project.meta .share a:hover, .footer .social a, .footer .social .fauxlink, .posts .post a .overlay { background-color: #404041;}
-	body, .ultralight, .dropmenu .send #mc-embedded-subscribe, .project.meta .share a, .dropmenu .social a, .posts .post.latest .wrap, .posts .post.latebig .wrap, .more a, .postnav li a, .postnav li span.empty, body.notouch .footer .social a:hover, body.notouch .footer .social .fauxlink:hover, .loading, .posts.related .post a .overlay { background-color: #B5B5B5; }
-	.light, .posts .post, .project.meta .share a { background-color: #d9d9d9; }
+	body, .ultralight, .dropmenu .send #mc-embedded-subscribe, .project.meta .share a, .dropmenu .social a, .posts .post.latest .wrap, .posts .post.latebig .wrap, .more a, .postnav li a, .postnav li span.empty, body.notouch .footer .social a:hover, body.notouch .footer .social .fauxlink:hover, .loading, .posts.related .post a .overlay { background-color: #27a9e1; }
+	.light, .posts .post, .project.meta .share a { background-color: #f1f1f2; }
 	.more .inner div, .postnav li, .footer .social { background-color: #cccccc; }
 	body.notouch .project.meta .share a:hover { background-color: #bbbbbb; }
 	.gray{background-color: #D9D9D9;}
