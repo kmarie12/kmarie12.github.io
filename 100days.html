@@ -257,7 +257,8 @@
     var feed = new Instafeed({
         get: 'tagged',
         tagName: '100DaysofPickingUpABrush',
-        clientId: '	ed98b1e79f364479bd7f5c29d825d119'
+        clientId: 'ed98b1e79f364479bd7f5c29d825d119',
+		template: '<a href="{{link}}" target="_blank"><img src="http:{{image}}" /></a>'
     });
     feed.run();
 </script>
