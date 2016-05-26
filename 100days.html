@@ -79,9 +79,9 @@
                             </div>
 
                       <div class="wrap">
-                        <h2 class="clearfix"><span class="title" style="font-family:Quicksand;">WHAT IF... you re-designed the way clients see you?</span><span class="icon"></span></h2>
+                        <h2 class="clearfix"><span class="title" style="font-family:Quicksand;">WHAT IF... you did one thing every day for 100 days?</span><span class="icon"></span></h2>
                         <div class="summary">
-                          <p style="color:white; font-family:Roboto; font-weight:300;">The company I currently work for needed a website face-lift. The outdated website wasn't the only issue, however. The marketing team realized that there were two kinds of clients coming to the site: those that already had affiliate programs and those that didn't. It was up to us to present SPC as the go-to place for affiliate knowledge no matter the clients' level of experience.</p>
+                          <p style="color:white; font-family:Roboto; font-weight:300;">Working on a computer all day, it's become more rare that I get to put pen/brush to paper (other than to sketch out ideas that end up on the computer). #The100DayProject was adapted from a grad school workshop led by Michael Beirut into a social media event coordinated by Elle Luna. For my 100 days, I picked #100DaysOfPickingUpABrush in order to get me back to my artistic roots. Some are good, some are bad, some are half-assed...but all are interesting in some way. Enjoy!</p>
                         </div>
                             </div>
                         </div>
@@ -91,44 +91,17 @@
                             <div class="inner">
                                 <div class="wrap">
                                     
-
-                                    <div id="instafeed"></div>
+									<div each loadfade>
+                                    <div id="instafeed"></div></div>
                                     
+                                    <div style="height: 50px;"></div>
                                     
-                                     <!--<div style="padding-bottom: 50px;"></div>
-                                    
-                                    <div style="width:50%; background-color: #27a9e1;">
-                                    <h1 style="color: #ffffff; font-size:24px; 
-                                    font-family:Quicksand; padding-left:10px;">THE FINAL HOMEPAGE</h1>
+                                    <div each loadfade style="text-align:center;">
+                                    <a href="https://www.instagram.com/explore/tags/100daysofpickingupabrush/"><img style="align: center;" src="img/seemoreinsta.png"></a>
                                     </div>
                                     
-                                    <div style="padding-bottom: 30px;"></div>
                                     
-                                    <div class="container">
-                            <div class="inner">
-                                <div class="wrap">
-                                    
-                                    <div class="each loadfade">
-                                        <div class="pad"><img src=
-                                        "img/appstills_1.png"></div>
-                                    </div>
-                                    
-                                    <div class="each loadfade">
-                                        <div class="pad"><img src=
-                                        "img/appstill_2.png"></div>
-                                    </div>
-                                   
-                                    
-    
-    					<div class="each loadfade" style="padding-top: 20px;">
-                                        <div class="pad"><img src=
-                                        "img/thinkeryapp_outside.jpg"></div>
-                                  </div>
-    
-    						<!--<div class="each loadfade">
-                                        <div class="pad"><img src=
-                                        "img/finalappscene.jpg"></div>
-                                    </div>-->
+                                     
                                     
                               </div>
                                 </div>
@@ -260,9 +233,10 @@
         tagName: '100daysofpickingupabrush',
 		links: true,
 		sortBy: 'most-recent',
+		limit: 100,
         clientId: 'ed98b1e79f364479bd7f5c29d825d119',
 		accessToken: '1123071046.467ede5.ccdfd66d6c7d414897887b8f668d7354',
-		template: '<li><div><a href="{{link}}"><img src="{{image}}" /></a><h3>{{caption}}</h3></div></li>'
+		template: '<li><div><a href="{{link}}"><img src="{{image}}" /></a><p>{{caption}}</p></div></li>'
     });
     feed.run();
 </script>
