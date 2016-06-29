@@ -763,6 +763,28 @@ Version: 1.1
 	
 	/*  ---------------------------------Instafeed----------------------------*/
 	
+	
+	#instagram{
+		
+  line-height: 3;
+   
+  -webkit-column-count: 3;
+  -webkit-column-gap:   10px;
+  -moz-column-count:    3;
+  -moz-column-gap:      5px;
+  column-count:         3;
+  column-gap:           10px; 
+  color: #404041;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 14px;
+  width: 100% !important;
+  height: auto !important;
+  
+  }
+
+	
 	#instafeed {
   /* Prevent vertical gaps */
   line-height: 3;
@@ -776,7 +798,7 @@ Version: 1.1
   color: #404041;
   font-family: Roboto;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 14px;
   
   }
