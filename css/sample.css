@@ -80,8 +80,8 @@ Version: 1.1
 		height: 500px;
 	}
 	
-	.header { background-color: #404041;
-	border-bottom: solid 1px #404041; }
+	.header { background-color: #;
+	border-bottom: solid 1px #; }
 	.header .go,
 	.dropmenu .social li,
 	.dropmenu .menu li,
@@ -749,9 +749,323 @@ Version: 1.1
 	}
 	/*iPhone (V)(Technically it should be 320px)*/ @media only screen and (max-width : 400px) {	}		
 	
+	#indexintro {
+		background: url(http://i.imgur.com/MDpzSp5.jpg), blue;
+		width: 100%;
+	}
+	
+	#banner-wrapper {
+	position:fixed;
+	height:auto;
+	overflow:hidden;
+	width:100%;
+	}
+	
+	#left {	
+	position:relative;
+	width:auto;
+	height:100%;
+	background:url(http://i.imgur.com/e2h5Ut1.jpg) center center;
+	
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+}
+
+#left p {
+	position:absolute;
+	font-family:"kepler-std-display", georgia, serif;
+	font-size:4.313em;
+	line-height:1.3em;
+	color:white;
+	font-style:italic;
+	font-weight:500;
+	text-align: center;
+	
+	left:75px;
+	margin-right:75px;
+	top:50%;
+	margin-top:-1.05em;
+	
+	transition:all ease-in .1s;
+	-moz-transition:all ease-in .1s;
+	-webkit-transition:all ease-in .1s;
+	-o-transition:all ease-in .1s;	
+}
+
+.yellow{
+	width: 65%;
+}
+
+#right {
+	position:absolute;
+	right:0px;
+	top:0px;
+
+	width:380px; /* 430 - 150 */
+	padding:45px;
+	background:url("../images/sidebarlines-bg.png") left top no-repeat #202020;
+	background-size:cover;
+}
+
+.right-mobile {
+	display:none;
+	background:url("../images/sidebarlines-bg.png") left top no-repeat #232323;
+	background-size:cover;
+}
+
+#right p.philosophy, .right-mobile p.philosophy {
+	margin-top:65%;
+	font-family:'Quicksand', Helvetica, Arial, sans-serif;
+	text-transform:uppercase;
+	color:rgba(255, 255, 255, .88);
+	letter-spacing:.18em;
+	font-size:14px;
+	font-weight:500;
+	-webkit-font-smoothing:antialiased;
+}
+
+.philosophy-center {
+	left:75px;
+	width:350px;
+	position:absolute;
+	top:50%;
+	margin-top:-318px;
+}
+
+
+#right p.logos, .right-mobile p.logos {
+	font-family:georgia, serif;
+	font-size:1.25em;
+	font-style:italic;
+	font-weight:lighter;
+	color:rgba(255, 255, 255, .70);
+	line-height:2.0em;
+}
+
+	.nous-menu-in {
+	opacity:.77 !important;
+	transition:ease 2.5s all 4s;
+	-webkit-transition:ease 2.5s all 4s;
+	-moz-transition:ease 2.5s all 4s;
+}
+
+a#nous:hover {
+	opacity:.75;
+}
+
+a#nous {
+	position:fixed;
+	left:75px;
+	top:75px;
+	z-index:2001;
+	display:inline-block;
+	font-family:"kepler-std-display", georgia, serif;
+	font-size:.9em;
+	letter-spacing:.15em;
+	color:#fff;
+	text-decoration:none;
+	font-weight:bold;
+	opacity:.8;
+	font-style:italic;	
+	
+	opacity:0;
+}
+
+#menu-wrapper {
+	display:none;
+	opacity:0;
+	z-index:2000;
+	position:fixed;
+	left:0px;
+	top:0px;
+	bottom:0px;
+	right:0px;
+	height:100%;
+	width:100%;
+	
+	transition:ease 1s opacity;
+	-webkit-transition:ease 1s opacity;
+	-moz-transition:ease 1s opacity;
+}
+
+.menu-in {
+	display:inherit !important;
+	opacity:1.0 !important;
+}
+
+.menu-overlay {
+	opacity:.93;
+	height:100%;
+	width:100%;
+	background:url("http://i.imgur.com/dWMNVv2.jpg");
+}
+
+#menu-wrapper ul {
+	display:none;
+	z-index:3000;
+	position:absolute;
+	text-align:center;
+	font-family:georgia, serif;
+	font-weight:lighter;
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	width:100%;
+	top:50%;
+	margin-top:-13.5%;	
+}
+
+#menu-wrapper ul li {
+	margin:0px;
+	margin-left:-25px;
+	margin-bottom:25px;
+	width:100%;
+}
+
+#menu-wrapper ul li:last-child {
+	margin-bottom:0px;
+}
+
+#menu-wrapper ul li a {
+	padding:15px;
+	display:inline-block;
+	color:#fff;
+	text-decoration:none;
+	width:100%;
+	cursor:pointer; 
+}
+
+#menu-wrapper ul li a:hover {
+	/*
+	background: rgb(29,190,163); /* Old browsers */
+	/*background: -moz-linear-gradient(45deg,  rgba(29,190,163,1) 0%, rgba(19,19,207,1) 100%); /* FF3.6+ */
+	/*background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(29,190,163,1)), color-stop(100%,rgba(19,19,207,1))); /* Chrome,Safari4+ */
+	/*background: -webkit-linear-gradient(45deg,  rgba(29,190,163,1) 0%,rgba(19,19,207,1) 100%); /* Chrome10+,Safari5.1+ */
+	/*background: -o-linear-gradient(45deg,  rgba(29,190,163,1) 0%,rgba(19,19,207,1) 100%); /* Opera 11.10+ */
+	/*background: -ms-linear-gradient(45deg,  rgba(29,190,163,1) 0%,rgba(19,19,207,1) 100%); /* IE10+ */
+	/*background: linear-gradient(45deg,  rgba(29,190,163,1) 0%,rgba(19,19,207,1) 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1dbea3', endColorstr='#1313cf',GradientType=1 ); /* 	IE6-9 fallback on horizontal gradient */
+	background: #0d0c10;
+	opacity:.63;
+	font-style:italic;
+	font-weight:normal;
+}
+
+
+#menu-icon {
+	z-index:2001;
+	right:75px;
+	top:75px;
+	position:fixed;
+	display:inline-block;
+	height:22px;
+	width:22px;
+	opacity:.7;
+	cursor:pointer;
+	
+	opacity:0;
+}
+
+#menu-icon-project {
+	z-index:2001;
+	right:75px;
+	top:75px;
+	position:absolute;
+	display:inline-block;
+	height:22px;
+	width:22px;
+	opacity:.7;
+	cursor:pointer;
+	
+	opacity:0;
+}
+
+#menu-name {
+	z-index:2001;
+	left:75px;
+	top:75px;
+	position:fixed;
+	display:inline-block;
+	align: left;
+	height:40px;
+	width:300px;
+	opacity:.7;
+	cursor:pointer;
+	color: white;
+	font-family: Quicksand;
+	font-size: 20px;
+	
+	
+	opacity:0;
+}
+
+#menu-name-project {
+	z-index:2001;
+	left:75px;
+	top:75px;
+	position:absolute;
+	display:inline-block;
+	align: left;
+	height:40px;
+	width:300px;
+	opacity:.7;
+	cursor:pointer;
+	color: white;
+	font-family: Quicksand;
+	font-size: 20px;
+	
+	
+	opacity:0;
+}
+
+#menu-icon:hover {
+	opacity:.75;
+}
+
+.line1, .line2, .line3 {
+	position:absolute;
+	display:block;
+	top:4px;
+	left:0px;
+	background-color:rgba(255, 255, 255, .9);
+	height:1px;
+	width:22px;
+	
+	transition: ease all .33s;
+	-webkit-transition: ease all .33s;
+	-moz-transition: ease all .33s;
+}
+
+.line2 {
+	top:11px;
+}
+
+.line3 {
+	top:18px;
+}
+	
+.site-toggles:before,
+  .site-toggles:after {
+    content: " ";
+    display: table;
+    line-height: 0;
+  }
+  .site-toggles:after {
+    clear: both;
+  }
+	
+#masthead {
+			background-image: url(http://i.imgur.com/MDpzSp5.jpg);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+}
+	
+	
 	.intro {
-		background-color: #45C5E3;
-		align: center;
+		
+		width: 100%;
 	}
 	.introtitle{
 		font-family:'Quicksand', Helvetica;

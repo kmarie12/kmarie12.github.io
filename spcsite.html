@@ -13,7 +13,208 @@
     <script src="js/vendor/modernizr.js"></script>
 
     <!-- <link href="css/main.css" rel="stylesheet" type="text/css" /> -->
+    <script src="js/vendor/modernizr.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/packery.pkgd.min.js"></script>
+	<script type="text/javascript" src="js/jquery.gsap.min.js"></script>
+	<script type="text/javascript" src="js/TweenMax.min.js"></script>
+
+    <!-- <link href="css/main.css" rel="stylesheet" type="text/css" /> -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+	document.addEventListener("touchstart", function(){}, true); /* TAP COLOR IPHONE */
+	
+	$(function(){
+		
+		$('.load-top').addClass("loadindicator");
+		
+		
+		/* PRELOADER */
+		$(window).load(function(){
+			$("#intro").addClass("intro-in");
+			$('#preloader').addClass("no-opacity");
+			$('#nous').addClass("nous-menu-in");
+			$('#menu-icon').addClass("nous-menu-in");		
+		}); 
+
+		
+		/* LOAD DETAIL IMAGES IN AFTER PAGE LOAD = DAT LOAD TIME DOE */
+		$(window).load(function () {
+            $.get("detailimages.html",function(data){
+            $("#detail-popup-container").append(data);
+				});
+		});
+		
+		/* LOAD DETAIL IMAGES IN AFTER PAGE LOAD = DAT LOAD TIME DOE */
+		$(window).load(function () {
+ 
+				
+		
+						
+				if(wWidth > 860) {
+					
+					// PHILOSOPHY
+					$.ajax({
+					 url: 'project-info/philosophy-info.html',
+					 dataType: 'html'
+					}).success(function(data) {
+					 $(".philosophy-center").append(data);
+					 $('#thumbs-container').packery();
+					});
+																
+					
+					
+					
+				}
+				else {
+										
+					// PHILOSOPHY
+					$.ajax({
+					 url: 'project-info/philosophy-info.html',
+					 dataType: 'html'
+					}).success(function(data) {
+					 $(".right-mobile").append(data);
+					 $('#thumbs-container').packery();
+					});
+																
+					
+				}
+				
+		}); // END WINDOW LOAD AJAX */
+		
+		
+		/* MENU ICON */		
+		$('#menu-icon-project').click(function(){
+			$('.line1').toggleClass("rotate1")
+			$('.line2').toggleClass("rotate2")
+			$('.line3').toggleClass("rotate3")
+			$('#menu-icon-project').toggleClass("clicked");
+			$('#menu-wrapper').toggleClass("menu-in");
+			$('#menu-controller').toggleClass("lostinspace topfix");
+			$('#nous').toggleClass("mobilenousfix");
+			
+			$('#menu-wrapper ul').fadeIn("800");
+			$('.list1').toggleClass("in-1");
+			$('.list2').toggleClass("in-2");
+			$('.list3').toggleClass("in-3");
+			$('.list4').toggleClass("in-4");
+			$('.list5').toggleClass("in-5");
+		});
+
+		/* EVERYTHING ELSE... :( */
+		$('#thumbs-container').packery({
+			itemSelector: '.item',
+			gutter: 0
+		});
+		
+		$('#nous').click(function(){
+			$('html, body').animate({scrollTop: 0}, 300);
+		});
+		
+	    var windowH = $(window).height();
+	    var wrapperH = $('#banner-wrapper').height();
+	    var differenceH = windowH - wrapperH;
+	    var newH = wrapperH + differenceH;
+	    var truecontentH = $('#truecontent').height();
+	    var leftH = $('#right').height()-150;
+	    var wWidth = $(window).width();
+	    var leftW = wWidth - 430;
+	    var detailW = wWidth - 580;
+	
+	     
+	    $('#left').css('width', (leftW)+'px');
+	    $('body').css('padding-top', (windowH)+'px');
+	    $('#banner-wrapper').css('margin-top', -(windowH)+'px');
+	    $('#detail-popup-container').css('width', (detailW)+'px');
+	    
+	    if(windowH > wrapperH) {                            
+	        $('#banner-wrapper').css({'height':($(window).height())+'px'});
+	    }   
+	    
+	    if(windowH > leftH) {
+		   $('#right').css({'height':($(window).height())-150+'px'}); 
+	    }
+	    
+	    if(wWidth > leftW) {
+		    $('#left').css('width', (leftW)+'px');   
+	    }
+	    
+	 
+		
+		if (wWidth > 863) {
+			$('.item').click(function(){			
+				$('#thumbs-container').removeClass("thumb-container-out").addClass("thumb-container-fade");
+				$('#info-container').removeClass("info-out").addClass("info-in");
+				$('html,body').animate({scrollTop: $("#thumbs-container").offset().top}, 200);	
+				$('#detail-popup-container').removeClass("detail-out").addClass("detail-in");
+				$('#nous').removeClass("menu-nous-in-quick").addClass("no-opacity-quick");
+				$('#menu-icon').removeClass("menu-nous-in-quick").addClass("no-opacity-quick");
+				$('.fade').addClass('nohover');
+
+			
+			});
+			
+			
+			/* WORK CLICK TO SHOWS */
+				
+
+			
+				
+				
+				
+				
+				$('#thumbs-container').packery();
+				
+				
+$('.hmtextile').click(function(){
+					$('.work-hmtextile').fadeIn('fast');
+					$('.info-hmtextile').fadeIn('fast');
+					$('#work-container').css('height', $('.hmtextile-height').height()+158);
+				});
+
+				
+		
+
+
+
+							
+				
+				$('.closex').click(function(){
+					$('#info-container').addClass("info-out");
+					$('#thumbs-container').addClass("thumb-container-out").removeClass("thumb-container-fade");
+					$('#detail-popup-container').removeClass("detail-in").addClass("detail-out");
+					$('a#nous').removeClass("no-opacity-quick").addClass("menu-nous-in-quick");
+					$('.fade').removeClass('nohover');
+					$('#work-container').css('height', 'auto');
+					$('.work-item').fadeOut(800);
+					$('.info-all').fadeOut(800);
+					$('#menu-icon').removeClass("no-opacity-quick").addClass("menu-nous-in-quick");		
+				});
+		
+					
+		} // END IF > 863 
+			
+		
+		if(wWidth < 999) {
+			$('#left').css('width', (wWidth)+'px');
+	
+		}
+		
+		
+		
+		$(window).scroll(function(){    
+	  	  if ($(this).scrollTop() > windowH){ 
+	        $('#info-container').addClass('stick'); 
+			}
+			
+			else{
+	  	      $('#info-container').removeClass('stick');
+	  		}
+		});
+	
+	});
+	
+	</script>
 
   </head>
 
@@ -22,52 +223,29 @@
     
    <div class="ultralight" id="WRAPPER">
         <header>
-            <div class="stretch header dark-gray">
-                <div class="container bez">
-                    <div class="inner clearfix">
-                        <div class="logo L col25">
-                            <h1><a href="http://kelseyaschenbeck.com" title=
-                            "KelseyAschenbeck"><span></span></a></h1>
-                        </div>
+            
+            	<div id="menu-name-project" class="nous-menu-in" align="left"><a href="http://www.kelseyaschenbeck.com"><span>Kelsey Aschenbeck</span></a></div>
+	<div id="menu-icon-project" class="nous-menu-in"><span></span>
+		<span class="line1"></span>
+		<span class="line2"></span>
+		<span class="line3"></span>
+	</div>
+    
+    <div id="menu-wrapper">
+	<ul>
+	   <li class="list1"><a href="https://drive.google.com/file/d/0B4zQd6OratDydE1JT0g2Y0hQT1E/view?usp=sharing" target="_blank">Résumé</a></li>
+	   <li class="list2"><a href="mailto:kelsey.aschenbeck@gmail.com">Email</a></li>
+	   <li class="list3"><a href="https://dribbble.com/kelseyabeck">Dribbble</a></li>
+	   <li class="list4"><a href="https://www.linkedin.com/in/kelseyaschenbeck" target="_blank">LinkedIn</a></li>
+	   <li class="list5"><a href="https://www.instagram.com/kelseyabeck/" target="_blank">Instagram</a></li>
+	</ul>
 
-                        <div class="go R col75 icon pointer">
-                            <img src="http://i.imgur.com/NbTgCSf.png" height="81px" width="105px">
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="stretch dropmenu ultralight">
-                <div class="container bez">
-                    <div class="inner clearfix">
-                        <div class="menu col75">
-                            <ul class="clearfix">
-                                <li class="col25 first live">
-                                    <a class="fade" href="http://kelseyaschenbeck.com"
-                                    title="KelseyAschenbeck">PROJECTS</a>
-                                </li>
-
-                                <li class="col25">
-                                    <a class="fade" href=
-                                    "about.html"
-                                    title=
-                                    "Kelsey Aschenbeck/About">ABOUT</a>
-                                </li>
-
-                                <li class="col25">
-                                    <a class="fade" href=
-                                    "http://the-get-go.ghost.io/" title=
-                                    "Kelsey Aschenbeck/Blog">BLOG</a>
-                                </li>
-                            </ul>
-                        </div>
-                        </div>
-                </div>
-            </div>
+	<div class="menu-overlay"></div>
+</div>
         </header>
 
        <section>
+       <div style="height:50px;"></div>
             <div id="content">
                 <article class="reg">
                     <div class="stretch project meta ultralight">
@@ -266,7 +444,7 @@
                             <ul class="clearfix light icon">
                                 <li class="col33 prev L">
                                     <a href=
-                                    "ccvineyards.html"
+                                    "hdyrartdirection.html"
                                     rel="prev">&#60;</a>
                                 </li>
 
@@ -277,7 +455,7 @@
 
                                 <li class="col33 next L">
                                     <a href=
-                                    "hdyrartdirection.html"
+                                    "thinkery.html"
                                     rel="next">&#62;</a>
                                 </li>
                             </ul>
@@ -285,13 +463,13 @@
                     </div>
                 </div>
 <section class="l-work-projects">
-                                                <a class="featured-project featured-project--small" href="hdyrartdirection.html">
+                                                <a class="featured-project featured-project--small" href="thinkery.html">
   
   
     
   <span data-picture="" data-alt="" class="featured-project__image">
-    <span data-src="img/coverpg_2.jpg"></span>
-    <span data-src="img/coverpg_2.jpg" data-media="(min-width: 700px)"><img alt="" src="img/coverpg_2.jpg"></span>
+    <span data-src="img/Thinkery_Poster_CloseUp-copy_2.jpg"></span>
+    <span data-src="img/Thinkery_Poster_CloseUp-copy_2.jpg" data-media="(min-width: 700px)"><img alt="" src="img/Thinkery_Poster_CloseUp-copy_2.jpg"></span>
 
     <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
     <noscript>
@@ -299,20 +477,20 @@
     </noscript>
   </span>
   <div class="featured-project__description">
-    <div class="featured-project__description__bg" style="background-color: #DC2B8F;"></div> b92235
+    <div class="featured-project__description__bg" style="background-color: #3D3E96;"></div> b92235
     <div class="heading-set heading-set--on-dark ">
-      <h1 class="heading-set__primary">How Do You Roll? Art Direction</h1>
-      <p class="heading-set__secondary"> What if you could play with your food for a living?</p>
+      <h1 class="heading-set__primary">THE THINKERY</h1>
+      <p class="heading-set__secondary"> What if you could visualize a STEAM education?</p>
     </div>
   </div>
-</a>          <a class="featured-project featured-project--small" href="thinkery.html">
+</a>          <a class="featured-project featured-project--small" href="ccvineyards.html">
   
-    <img src="img/Thinkery_Poster_CloseUp-copy_2.jpg" alt="" class="featured-project__image">
+    <img src="img/CCVineyards4_2.jpg" alt="" class="featured-project__image">
   <div class="featured-project__description">
-    <div class="featured-project__description__bg" style="background-color: #3D3E96;"></div> 
+    <div class="featured-project__description__bg" style="background-color: #8BC64D;"></div> 
     <div class="heading-set heading-set--on-dark ">
-      <h1 class="heading-set__primary">The Thinkery</h1>
-      <p class="heading-set__secondary">What if you could visualize a STEAM education?</p>
+      <h1 class="heading-set__primary">CUMMINS CREEK VINEYARDS</h1>
+      <p class="heading-set__secondary">What if you could start your own vineyard?</p>
     </div>
   </div>
 </a>          <a class="featured-project featured-project--small" href="aschenbeckfarms.html">
