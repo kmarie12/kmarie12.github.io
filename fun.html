@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+ <title>Instagramify your website</title>
+ 
+</head>
+<body>
+<div id="Instafeed"></div>
+<script type="text/javascript" src="js/instagram.js"></script>
+<script type="text/javascript" src="js/instafeed.min.js"></script>
+    <script type="text/javascript">
+    var feed = new Instafeed({
+		target: 'instafeed',
+        get: 'tagged',
+        tagName: '100daysofpickingupabrush',
+		links: true,
+		sortBy: 'most-recent',
+        clientId: 'ed98b1e79f364479bd7f5c29d825d119',
+		accessToken: '1123071046.467ede5.ccdfd66d6c7d414897887b8f668d7354',
+		template: '<li><div><a href="{{link}}"><img src="{{image}}" /></a><h3>{{caption}}</h3></div></li>'
+    });
+    feed.run();
+</script>
+</body>
+</html>
+
