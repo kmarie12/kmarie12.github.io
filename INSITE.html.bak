@@ -1,0 +1,147 @@
+<html class=" js flexbox flexboxlegacy rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio svg svgclippaths"
+  lang="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,300,300italic,900italic,900,400italic"
+      rel="stylesheet"
+      type="text/css">
+    <title>Kelsey Aschenbeck | Aschenbeck Farms</title>
+    <meta name="description" content="Portfolio Site">
+    <meta name="author" content="Kelsey Aschenbeck">
+    <!--Links to a modernizer JavaScript file that fixes a lot of issues with old browsers-->
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script src="js/modernizr.js"></script>
+    <!--Makes the site so it won't scale down on small devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="sss/sss.min.js"></script>
+    <script src="sss/sss.js"></script>
+    <link rel="stylesheet" href="sss/sss.css" type="text/css" media="all">
+    <script>
+jQuery(function($) {
+$('.slider').sss();
+});
+    
+    $('.slider').sss({
+slideShow : true, // Set to false to prevent SSS from automatically animating.
+startOn : 0, // Slide to display first. Uses array notation (0 = first slide).
+transition : 600, // Length (in milliseconds) of the fade transition.
+speed : 8000, // Slideshow speed in milliseconds.
+showNav : true // Set to false to hide navigation arrows.
+});
+
+</script> </head>
+  <body data-shoptagr-mini="yes" style="zoom: 1;">
+    <header><a href="index.html" alt="Home">
+        <h1>Kelsey Aschenbeck</h1>
+      </a></header>
+    <input id="toggle" type="checkbox">
+    <label for="toggle" class="hamburger">
+      <div class="top-bun"></div>
+      <div class="meat"></div>
+      <div class="bottom-bun"></div>
+    </label>
+    <div class="nav">
+      <div class="nav-wrapper">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <span class="smaller">
+              <li><a href="thinkeryapp.html">Thinkery App</a></li>
+              <li><a href="HowDoYouRoll.html">How Do You Roll?</a></li>
+              <li><a href="AschenbeckFarms.html">Aschenbeck Farms</a></li>
+              <li><a href="100DayProject.html">#The100DayProject</a></li>
+              <li><a href="SPC.html">SPC Re-Design</a></li>
+              <li><a href="INSITE.html">INSITE</a></li>
+              <li><a href="kelsey.aschenbeck@gmail.com">Contact</a></li>
+              <li><a href="https://drive.google.com/file/d/0B4zQd6OratDycHdYQUM1cmJvQmM/view?usp=sharing">Resume</a></li>
+              <span class="social">
+                <li><a target="_blank" href="https://www.linkedin.com/in/kelseyaschenbeck"
+                    title="Linkedin"><img
+                      src="images/linkedin.png"
+                      alt="LinkedIn"></a></li>
+                <li> <a target="_blank" href="https://dribbble.com/kelseyabeck"
+                    title="Dribbble"><img
+                      src="images/dribbble.png"
+                      alt="Dribbble"></a></li>
+                <li> <a target="_blank" href="https://www.instagram.com/kelseyabeck/"
+                    title="Instagram"><img
+                      src="images/instagram.png"
+                      alt="Instagram"></a></li>
+              </span> </span>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div id="page-content">
+      <div class="rightcol">
+        <h1 style="color:#848484;">INSITE</h1>
+        <h2>Brief</h2>
+        <p>This spec project is a site/app that lets you see what new buildings
+          are going up in your neighborhood and what they will look like. </p>
+        <h2>Scope</h2>
+        <p>Branding, UX, &amp; UI</p>
+      </div>
+      <div class="leftcol">
+        <div class="insideleftcol"> <img src="images/INSITEmockup.png" alt="INSITE">
+          <h4>INSIGHT INTO YOUR CITY</h4>
+          <p>INSITE looks at new construction that is happening around the user.
+            3D renderings that architects produce for clients can be used to
+            create a digital map of what’s to come. If near the site, the user
+            can use their phone to see an augmented reality view of what the
+            site will look like once the construction is finished. The user can
+            also use other functions of INSITE to see other projects happening
+            in their city and what other people are saying about those projects.</p>
+          <p class="columns"><em>Strategy: </em>INSITE needed to give people
+            access to info about what was happening in their city, a place to
+            discuss it, and as many visual images as possible to let them see
+            what it would look like. </p>
+          <p class="columns"><em>Creative Solution: </em>Adding a Pokemon
+            Go-esque augmented reality feature gave INSITE a cool factor.</p>
+          <h4>PERSONA</h4>
+          <img src="images/insite_persona.png" alt="INSITE persona">
+          <h4>PROCESS</h4>
+          <p>The home page is featured in the center because from there you can
+            scroll down to see a news feed of latest buzz about new
+            construction. It seeks to inform citizens as well as give them an
+            outlet to discuss what is changing their city. Users have the option
+            to search sites by map, gps location, or by typing in their search
+            directly. Each of these options takes them to a list of projects
+            either near them or close to their search. Once they are on the
+            project page, users can contact a realtor for more information or
+            (if the option is available) they can tune in to a live crane watch
+            feed. </p>
+          <img src="images/INSITE_map.png" alt="INSITE map">
+          <h4>WIREFRAMES</h4>
+          <img src="images/INSITE_wireframes.png" alt="INSITE wireframes">
+          <h4>BRANDING</h4>
+          <p>The logo invokes Google’s map pin iconography, but also features
+            iconic buildings of Austin. As INSITE grows with popularity, each
+            city gains a custom logo with their own skyline. Because INSITE is
+            about construction, I shied away from using any shades of green.
+            Instead, I used shades of dusty rose and yellow, grounded with a
+            deep indigo.</p>
+          <div class="wrap">
+            <div class="imgcolumn"> <img src="images/INSITE_logo.png" alt="logo"></div>
+            <div class="imgcolumn"> <img src="images/INSITE_colors.png" alt="colors"></div>
+          </div>
+          <h4>FINAL</h4>
+          <p>To the left is a mockup of a project page. The two to the right are
+            the mockups of the home page and the newsfeed that appears when a
+            user scrolls further down.</p>
+          <img src="images/INSITE_mockups.png" alt="MOCKUP"> </div>
+      </div>
+    </div>
+    <div style="display: none;">
+      <div class="niice-bar" id="niice-bar">
+        <div class="boards"> </div>
+        <div class="loading-spinner">Loading…</div>
+        <div class="error-text"> <span class="msg"></span> <span class="close-cross">×</span>
+        </div>
+      </div>
+    </div>
+    <div id="extension-is-installed"></div>
+  </body>
+</html>

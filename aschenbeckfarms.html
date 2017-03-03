@@ -1,454 +1,149 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<html class=" js flexbox flexboxlegacy rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio svg svgclippaths"
+  lang="en">
   <head>
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700,300" rel="stylesheet" type="text/css">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kelsey Aschenbeck</title>
-      <!-- <link rel="stylesheet" href="css/foundation.css" /> --> 
-    <link rel="stylesheet" href="css/portfolio.css" />
-  <link rel="stylesheet" href="css/sample.css" /> 
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,300,300italic,900italic,900,400italic"
+      rel="stylesheet"
+      type="text/css">
+    <title>Kelsey Aschenbeck | Aschenbeck Farms</title>
+    <meta name="description" content="Portfolio Site">
+    <meta name="author" content="Kelsey Aschenbeck">
+    <!--Links to a modernizer JavaScript file that fixes a lot of issues with old browsers-->
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script src="js/modernizr.js"></script>
+    <!--Makes the site so it won't scale down on small devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="sss/sss.min.js"></script>
+    <script src="sss/sss.js"></script>
+    <link rel="stylesheet" href="sss/sss.css" type="text/css" media="all">
+    <script>
+jQuery(function($) {
+$('.slider').sss();
+});
     
-    <script src="js/vendor/modernizr.js"></script>
+    $('.slider').sss({
+slideShow : true, // Set to false to prevent SSS from automatically animating.
+startOn : 0, // Slide to display first. Uses array notation (0 = first slide).
+transition : 600, // Length (in milliseconds) of the fade transition.
+speed : 8000, // Slideshow speed in milliseconds.
+showNav : true // Set to false to hide navigation arrows.
+});
 
-    <!-- <link href="css/main.css" rel="stylesheet" type="text/css" /> -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-	<script src="js/vendor/modernizr.js"></script>
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="js/packery.pkgd.min.js"></script>
-	<script type="text/javascript" src="js/jquery.gsap.min.js"></script>
-	<script type="text/javascript" src="js/TweenMax.min.js"></script>
-
-    <!-- <link href="css/main.css" rel="stylesheet" type="text/css" /> -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-	<script type="text/javascript">
-	document.addEventListener("touchstart", function(){}, true); /* TAP COLOR IPHONE */
-	
-	$(function(){
-		
-		$('.load-top').addClass("loadindicator");
-		
-		
-		/* PRELOADER */
-		$(window).load(function(){
-			$("#intro").addClass("intro-in");
-			$('#preloader').addClass("no-opacity");
-			$('#nous').addClass("nous-menu-in");
-			$('#menu-icon').addClass("nous-menu-in");		
-		}); 
-
-		
-		/* LOAD DETAIL IMAGES IN AFTER PAGE LOAD = DAT LOAD TIME DOE */
-		$(window).load(function () {
-            $.get("detailimages.html",function(data){
-            $("#detail-popup-container").append(data);
-				});
-		});
-		
-		/* LOAD DETAIL IMAGES IN AFTER PAGE LOAD = DAT LOAD TIME DOE */
-		$(window).load(function () {
- 
-				
-		
-						
-				if(wWidth > 860) {
-					
-					// PHILOSOPHY
-					$.ajax({
-					 url: 'project-info/philosophy-info.html',
-					 dataType: 'html'
-					}).success(function(data) {
-					 $(".philosophy-center").append(data);
-					 $('#thumbs-container').packery();
-					});
-																
-					
-					
-					
-				}
-				else {
-										
-					// PHILOSOPHY
-					$.ajax({
-					 url: 'project-info/philosophy-info.html',
-					 dataType: 'html'
-					}).success(function(data) {
-					 $(".right-mobile").append(data);
-					 $('#thumbs-container').packery();
-					});
-																
-					
-				}
-				
-		}); // END WINDOW LOAD AJAX */
-		
-		
-		/* MENU ICON */		
-		$('#menu-icon-project').click(function(){
-			$('.line1').toggleClass("rotate1")
-			$('.line2').toggleClass("rotate2")
-			$('.line3').toggleClass("rotate3")
-			$('#menu-icon-project').toggleClass("clicked");
-			$('#menu-wrapper').toggleClass("menu-in");
-			$('#menu-controller').toggleClass("lostinspace topfix");
-			$('#nous').toggleClass("mobilenousfix");
-			
-			$('#menu-wrapper ul').fadeIn("800");
-			$('.list1').toggleClass("in-1");
-			$('.list2').toggleClass("in-2");
-			$('.list3').toggleClass("in-3");
-			$('.list4').toggleClass("in-4");
-			$('.list5').toggleClass("in-5");
-		});
-
-		/* EVERYTHING ELSE... :( */
-		$('#thumbs-container').packery({
-			itemSelector: '.item',
-			gutter: 0
-		});
-		
-		$('#nous').click(function(){
-			$('html, body').animate({scrollTop: 0}, 300);
-		});
-		
-	    var windowH = $(window).height();
-	    var wrapperH = $('#banner-wrapper').height();
-	    var differenceH = windowH - wrapperH;
-	    var newH = wrapperH + differenceH;
-	    var truecontentH = $('#truecontent').height();
-	    var leftH = $('#right').height()-150;
-	    var wWidth = $(window).width();
-	    var leftW = wWidth - 430;
-	    var detailW = wWidth - 580;
-	
-	     
-	    $('#left').css('width', (leftW)+'px');
-	    $('body').css('padding-top', (windowH)+'px');
-	    $('#banner-wrapper').css('margin-top', -(windowH)+'px');
-	    $('#detail-popup-container').css('width', (detailW)+'px');
-	    
-	    if(windowH > wrapperH) {                            
-	        $('#banner-wrapper').css({'height':($(window).height())+'px'});
-	    }   
-	    
-	    if(windowH > leftH) {
-		   $('#right').css({'height':($(window).height())-150+'px'}); 
-	    }
-	    
-	    if(wWidth > leftW) {
-		    $('#left').css('width', (leftW)+'px');   
-	    }
-	    
-	 
-		
-		if (wWidth > 863) {
-			$('.item').click(function(){			
-				$('#thumbs-container').removeClass("thumb-container-out").addClass("thumb-container-fade");
-				$('#info-container').removeClass("info-out").addClass("info-in");
-				$('html,body').animate({scrollTop: $("#thumbs-container").offset().top}, 200);	
-				$('#detail-popup-container').removeClass("detail-out").addClass("detail-in");
-				$('#nous').removeClass("menu-nous-in-quick").addClass("no-opacity-quick");
-				$('#menu-icon').removeClass("menu-nous-in-quick").addClass("no-opacity-quick");
-				$('.fade').addClass('nohover');
-
-			
-			});
-			
-			
-			/* WORK CLICK TO SHOWS */
-				
-
-			
-				
-				
-				
-				
-				$('#thumbs-container').packery();
-				
-				
-$('.hmtextile').click(function(){
-					$('.work-hmtextile').fadeIn('fast');
-					$('.info-hmtextile').fadeIn('fast');
-					$('#work-container').css('height', $('.hmtextile-height').height()+158);
-				});
-
-				
-		
-
-
-
-							
-				
-				$('.closex').click(function(){
-					$('#info-container').addClass("info-out");
-					$('#thumbs-container').addClass("thumb-container-out").removeClass("thumb-container-fade");
-					$('#detail-popup-container').removeClass("detail-in").addClass("detail-out");
-					$('a#nous').removeClass("no-opacity-quick").addClass("menu-nous-in-quick");
-					$('.fade').removeClass('nohover');
-					$('#work-container').css('height', 'auto');
-					$('.work-item').fadeOut(800);
-					$('.info-all').fadeOut(800);
-					$('#menu-icon').removeClass("no-opacity-quick").addClass("menu-nous-in-quick");		
-				});
-		
-					
-		} // END IF > 863 
-			
-		
-		if(wWidth < 999) {
-			$('#left').css('width', (wWidth)+'px');
-	
-		}
-		
-		
-		
-		$(window).scroll(function(){    
-	  	  if ($(this).scrollTop() > windowH){ 
-	        $('#info-container').addClass('stick'); 
-			}
-			
-			else{
-	  	      $('#info-container').removeClass('stick');
-	  		}
-		});
-	
-	});
-	
-	</script>
-  </head>
-
-
-  <body class="notouch loaded">
-    
-   <div class="ultralight" id="WRAPPER">
-        <header>
-            
-            	<div id="menu-name-project" class="nous-menu-in" align="left"><a href="http://www.kelseyaschenbeck.com"><span>Kelsey Aschenbeck</span></a></div>
-	<div id="menu-icon-project" class="nous-menu-in"><span></span>
-		<span class="line1"></span>
-		<span class="line2"></span>
-		<span class="line3"></span>
-	</div>
-    
-    <div id="menu-wrapper">
-	<ul>
-	   <li class="list1"><a href="https://drive.google.com/file/d/0B4zQd6OratDydE1JT0g2Y0hQT1E/view?usp=sharing" target="_blank">Résumé</a></li>
-	   <li class="list2"><a href="mailto:kelsey.aschenbeck@gmail.com">Email</a></li>
-	   <li class="list3"><a href="https://dribbble.com/kelseyabeck">Dribbble</a></li>
-	   <li class="list4"><a href="https://www.linkedin.com/in/kelseyaschenbeck" target="_blank">LinkedIn</a></li>
-	   <li class="list5"><a href="https://www.instagram.com/kelseyabeck/" target="_blank">Instagram</a></li>
-	</ul>
-
-	<div class="menu-overlay"></div>
-</div>
-        </header>
-
-        <section>
-        <div style="height:50px;"></div>
-            <div id="content">
-                <article class="reg">
-                    <div class="stretch project meta ultralight">
-                        <div class="container">
-                            <!-- <div class="loading">
-                                <div class="icon spin">
-                                    &#x63;
-                                </div> -->
-                            </div>
-
-                            <div class="wrap">
-                            <div style="height:50px;"></div>
-                              <h2 class="clearfix"><span class="title" style="font-family:Quicksand; text-align:center;">WHAT IF...branding went literal?</span><span class="icon"></span></h2>
-                              <div class="summary">
-                                <p style="color:white; font-family:Roboto; font-weight:300;">Aschenbeck Farms was in need of (literal) branding. They needed a logo that would not only adapt to multiple business ventures but also be simple enough to be formed into a cattle brand. Cattle brand have long been associated with ownership and some have even become more prolific than the ranches they represent. Because of its flexibility, the AF logo will be passed down and used for generations to come.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                    
-                    <div class="stretch project media light">
-                        <div class="container">
-                            <div class="inner">
-                                <div class="wrap">
-                                    
-
-                                    <div class="each loadfade">
-                                        <div class="pad"><img src=
-                                        "img/AF1.jpg"></div>
-                                    </div>
-                                    
-                                    <div class="each med cc loadfade">
-                                        <div class="pad" width="33%;"><img src=
-                                        "img/graph_brand.jpg"></div>
-                                    </div>
-
-                                    <div class="each med aa loadfade">
-                                        <div class="pad" style="padding-left:10px;"><img src=
-                                        "img/cattlebrand2.jpg"></div>
-                                    </div> 
-
-                                    <div class="each med bb loadfade">
-                                        <div class="pad" style="padding-left:10px;"><img src=
-                                        "img/cattlebrand1.jpg"></div>
-                                    </div>
-                                    
-                                    <div class="each loadfade">
-                                        <div class="pad">
-                                     
-                                        <p style="color:#4B4B4B">
-I started by sketching out things based on past Texas cattle brands. Traditional Mexican cattle brands are characterized by imagery, as seen in the picture above (top right). Texan cattle ranchers had trouble identifiying brands that were designed this way, so they opted for more simplified images and initials. After many designs, my dad (one of my toughest clients to date) and I decided upon the bottom right circle AF. The curved letters represent the long road that surrounds the ranch.</p></div>
-                                    </div>
-
-                                    <div class="each loadfade">
-                                        <div class="pad"><img src=
-                                        "img/AF_photostrip.jpg"></div>
-                                    </div>
-                                    
-                                    <div class="each med aa loadfade">
-                                        <div class="pad"><img src=
-                                        "img/BusinessCards_back.jpg"></div>
-                                    </div>
-
-                                    <div class="each med bb loadfade">
-                                        <div class="pad"><img src=
-                                        "img/BusinessCards_front.jpg"></div>
-                                    </div>
-
-                                    <div class="each loadfade">
-                                        <div class="pad"><img src=
-                                        "img/AF_cards.jpg"></div>
-                                    </div>
-
-                                    <div class="each loadfade">
-                                        <div class="pad"><img src=
-                                        "img/AF3.jpg"></div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-<!-- End of content; footer begins -->
-               <div class="stretch postnav ultralight">
-                    <div class="container">
-                        <div class="inner">
-                            <ul class="clearfix light icon">
-                                <li class="col33 prev L">
-                                    <a href=
-                                    "thinkery.html"
-                                    rel="prev">&#60;</a>
-                                </li>
-
-                                <li class="col34 index L">
-                                    <a href="http://kelseyaschenbeck.com" title=
-                                    "All Projects" style="font-family: Quicksand;">| KA |</a>
-                                </li>
-
-                                <li class="col33 next L">
-                                    <a href=
-                                    "ccvineyards.html"
-                                    rel="next">&#62;</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-<section class="l-work-projects">
-                                                <a class="featured-project featured-project--small" href="100days.html">
-  
-  
-    
-  <span data-picture="" data-alt="" class="featured-project__image">
-    <span data-src="img/100days.jpg"></span>
-    <span data-src="img/100days.jpg" data-media="(min-width: 700px)"><img alt="" src="img/100days.jpg"></span>
-
-    <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-    <noscript>
-      &lt;img src="img/CCVineyards4_2.jpg" alt="" class="featured-project__image"&gt;
-    </noscript>
-  </span>
-  <div class="featured-project__description">
-    <div class="featured-project__description__bg" style="background-color: #DC2B8F;"></div>
-    <div class="heading-set heading-set--on-dark ">
-      <h1 class="heading-set__primary">#THE100DAYPROJECT</h1>
-      <p class="heading-set__secondary">What if you picked up a brush every day for 100 days?</p>
+</script> </head>
+  <body data-shoptagr-mini="yes" style="zoom: 1;">
+    <header><a href="index.html" alt="Home">
+        <h1 style="color: #F39128;">Kelsey Aschenbeck</h1>
+      </a></header>
+    <input id="toggle" type="checkbox"> <label for="toggle" class="hamburger">
+      <div class="top-bun" style="background-color: #F39128;"></div>
+      <div class="meat" style="background-color: #F39128;"></div>
+      <div class="bottom-bun" style="background-color: #F39128;"></div>
+    </label>
+    <div class="nav">
+      <div class="nav-wrapper">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <span class="smaller">
+              <li><a href="thinkeryapp.html">Thinkery App</a></li>
+              <li><a href="HowDoYouRoll.html">How Do You Roll?</a></li>
+              <li><a href="AschenbeckFarms.html">Aschenbeck Farms</a></li>
+              <li><a href="100DayProject.html">#The100DayProject</a></li>
+              <li><a href="SPC.html">SPC Re-Design</a></li>
+              <li><a href="kelsey.aschenbeck@gmail.com">Contact</a></li>
+              <li><a href="https://drive.google.com/file/d/0B4zQd6OratDycHdYQUM1cmJvQmM/view?usp=sharing">Resume</a></li>
+              <span class="social">
+                <li><a target="_blank" href="https://www.linkedin.com/in/kelseyaschenbeck"
+                    title="Linkedin"><img
+                      src="images/linkedin.png"
+                      alt="LinkedIn"></a></li>
+                <li> <a target="_blank" href="https://dribbble.com/kelseyabeck"
+                    title="Dribbble"><img
+                      src="images/dribbble.png"
+                      alt="Dribbble"></a></li>
+                <li> <a target="_blank" href="https://www.instagram.com/kelseyabeck/"
+                    title="Instagram"><img
+                      src="images/instagram.png"
+                      alt="Instagram"></a></li>
+              </span> </span>
+          </ul>
+        </nav>
+      </div>
     </div>
-  </div>
-</a>          <a class="featured-project featured-project--small" href="thinkeryapp.html">
-  
-    <img src="img/finalappscene2_2.jpg" alt="" class="featured-project__image">
-  <div class="featured-project__description">
-    <div class="featured-project__description__bg" style="background-color: #D8A728;"></div> 
-    <div class="heading-set heading-set--on-dark ">
-      <h1 class="heading-set__primary">Thinkery App</h1>
-      <p class="heading-set__secondary">What if you could create a digital souvenir?</p>
-    </div>
-  </div>
-</a>          <a class="featured-project featured-project--small" href="hdyrartdirection.html">
-  
-  
-    
-  <span data-picture="" data-alt="" class="featured-project__image">
-    <span data-src="img/coverpg_2.jpg"></span>
-    <span data-src="img/coverpg_2.jpg" data-media="(min-width: 700px)"><img alt="" src="img/coverpg_2.jpg"></span>
-
-    <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-    <noscript>
-      &lt;img src="img/coverpg_2.jpg" alt="" class="featured-project__image"&gt;
-    </noscript>
-  </span>
-  <div class="featured-project__description">
-    <div class="featured-project__description__bg" style="background-color: #DC2B8F;"></div>
-    <div class="heading-set heading-set--on-dark ">
-      <h1 class="heading-set__primary">How Do You Roll? Art Direction</h1>
-      <p class="heading-set__secondary">What if you could play with your food for a living?</p>
-    </div>
-  </div>
-</a>      </section>
-
-              
-
-    <footer>
-        <div class="stretch footer dark-gray">
-            <div class="container bez">
-                <div class="inner">
-                    <div class="legal L col33">
-                        <span style="font-family: Quicksand;">©2016 Kelsey Aschenbeck</span>
-                    </div>
-
-                    <div class="social L col66" height="86 px">
-                        <ul class="icon">
-                             <li class="col50 top L">
-                                <div class="fauxlink pointer">
-                                    <span>&#x5e;</span>
-
-                             <li class="col50 I L">
-                                <a href="mailto: kelsey.aschenbeck@gmail.com"  title="Contact" style="font-family: Quicksand;">CONTACT</a>
-                            </li>
-
-                            <!-- <li class="col25 T L">
-                                <a href="http://twitter.com/rspny" target=
-                                "_blank" title="Twitter">&#x74;</a>
-                            </li>
-                            <li class="col25 D L">
-                                <a href="http://www.facebook.com/rspny" target=
-                                "_blank" title="Facebook">&#x66;</a>
-                            </li> -->
-
-                            
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <div id="page-content">
+      <div class="rightcol">
+        <h1 style="color: #848484;">Aschenbeck Farms</h1>
+        <h2>Brief</h2>
+        <p>I teamed up with my father to create a cattle brand that could also
+          be used for print purposes. </p>
+        <h2>Scope</h2>
+        <p>Branding &amp; Idenitity</p>
+      </div>
+      <div class="leftcol">
+        <div class="insideleftcol"> <img src="images/AF1_noborder.jpg" alt="Cover">
+          <h4>(Literal) Branding</h4>
+          <p>Aschenbeck Farms was in need of (literal) branding. They needed a
+            logo that would adapt to multiple business ventures but also be
+            simple enough to be formed into a cattle brand. Cattle brands have
+            long been associated with ownership and some have even become more
+            prolific than the ranches they represent. Because of its
+            flexibility, the AF logo will be passed down and used for
+            generations to come.</p>
+          <p class="columns"><em>Strategy: </em>The brand needed to have thick
+            enough lines to be made by hand. It was very important to my dad
+            that he get to make it himself. </p>
+          <p class="columns"><em>Creative Solution: </em>The brand needed to
+            have a modern feel to be adaptible to things other than a cattle
+            brand. Clean, bold lines ensured that the brand would translate to
+            paper as well as any other material the brand should find itself on.</p>
+          <h4>RESEARCH</h4>
+          <p>The history of cattle-branding in Texas is a rich one. When herding
+            cattle to auction or to be processed, branding was the easiest way
+            to denote ownership and prevent theft. Before Texas was Texas,
+            vaqueros (the cowboys' Mexican counterpart) were using brands that
+            were pictoral with circular flourishes. <em>(See Picture 1)</em>
+            American cowboys were confused by these and preferred letter-based
+            brands. <em>(See Picture 2)</em> Some of these brands (most notably
+            the 'running w' of King Ranch) would become symbols of the ranches'
+            quality and wealth.</p>
+          <img src="images/cattlebrand2.jpg" alt="Mexican-Texan Brands"> <img src="images/cattlebrand1.jpg"
+            alt="Texan Brands">
+          <h4>PROCESS</h4>
+          <p>My dad has been my hardest design client. He wanted the initials
+            'AF' for Aschenbeck Farms instead of using his own initials (like my
+            grandfather before him had done.) After my dad made the brand, I
+            actually preferred the softer edges that the burn marks created. I
+            modified my original version to match the softer metal brand. </p>
+          <img src="images/graph_brand.jpg" alt="process">
+          <div style="padding-top:15px;"></div>
+          <h4>FINAL PRODUCT</h4>
+          <p>It is traditional to let your brands heat up in a fire, but we
+            chose a blow torch because we were impatient and wanted to see our
+            creation in action.</p>
+          <img src="images/AF_photostrip.jpg" alt="process">
+          <h4>ADDITIONAL USES</h4>
+          <p>New print uses for the logo are always arising. Currently, its
+            being used for business cards and postcards.</p>
+          <img src="images/AF_cards.jpg" alt="Business Cards">
+          <div class="wrap">
+            <div class="imgcolumn"> <img src="images/AF_cowpostcard.png" alt="Postcard1"></div>
+            <div class="imgcolumn"> <img src="images/AF_cowpostcardchristmas.png"
+                alt="Postcard2"></div>
+          </div>
         </div>
-    </footer><script src=
-    "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type=
-    "text/javascript"></script><script src=
-"http://r-ny.com/wp-content/themes/RCO/Resources/JS/Modernizr.js" type=
-"text/javascript"></script><script>
-/*<![CDATA[*/$(function(){if(Modernizr.touch){$('body').addClass('touch');}else{$('body').addClass('notouch');}
-    $(".go").click(function(){$(".dropmenu").slideToggle('slow');});$('.top').click(function(){$("html, body").animate({scrollTop:0},600);return false;});$(".project.meta h2").click(function(){if($(window).width()<769){$(".project.meta .summary").slideToggle();$(".project.meta h2 span.icon").toggleClass("open");}});$(".each.med.bb").after("<div class='clear'><\/div>");});$(window).load(function(){$('body').addClass('loaded');});(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-44615899-1','r-ny.com');ga('send','pageview');/*]]>*/
-    </script>
-</body>
+      </div>
+    </div>
+    <div style="display: none;">
+      <div class="niice-bar" id="niice-bar">
+        <div class="boards"> </div>
+        <div class="loading-spinner">Loading…</div>
+        <div class="error-text"> <span class="msg"></span> <span class="close-cross">×</span>
+        </div>
+      </div>
+    </div>
+    <div id="extension-is-installed"></div>
+  </body>
 </html>
