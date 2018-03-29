@@ -861,7 +861,7 @@ section.module.parallax-3 {
 	position:relative;
 	width:auto;
 	height:100%;
-	background:url(http://i.imgur.com/y3svPgD.gif) center center;
+	background:url(https://i.imgur.com/S3mclbp.jpg) center center;
 	
 	background-size:cover;
 	-webkit-background-size:cover;
@@ -874,13 +874,13 @@ section.module.parallax-3 {
 	font-size:6em;
 	line-height:1.3em;
 	color:white;
-	font-style:italic;
+	font-style:
 	font-weight:500;
-	text-align: center;
+	text-align: ;
 	
 	left:75px;
 	margin-right:75px;
-	top:50%;
+	top:30%;
 	margin-top:-1.05em;
 	
 	transition:all ease-in .1s;
@@ -900,7 +900,8 @@ section.module.parallax-3 {
 
 	width:380px; /* 430 - 150 */
 	padding:45px;
-	background:url("../images/sidebarlines-bg.png") left top no-repeat #202020;
+	background:url("../images/sidebarlines-bg.png") left top no-repeat #2D265C;
+	opacity: 0.95;
 	background-size:cover;
 }
 
