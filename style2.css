@@ -61,14 +61,21 @@ header {
     background-color: #f8f8f8;
     position: center center;
     overflow: hidden;
-	background-image:url(images/Header2.png);
-	
+	background-image:url(images/Header5.jpg);
+	display: block;
+  display: block;
+  max-width: 100%;
+  /* just in case, to force correct aspect ratio */
+  height: auto !important;
+  width: auto\9; /* ie8+9 */
+  /* lt ie8 */
+  -ms-interpolation-mode: bicubic; 
 }
 
     .intro {
         width: 100%;
         position: absolute;
-        bottom: 30%;
+        bottom: 40%;
         padding-bottom: 50px;
         z-index: 15;
     }
