@@ -8285,23 +8285,27 @@ AFRAME.registerComponent('arjs-anchor', {
 				markerParameters.type = 'barcode'
 				markerParameters.barcodeValue = 1001
 				markerParameters.markersAreaEnabled = true
-			}else if( _this.data.type === 'barcode' ){
-				markerParameters = {
-					type:               _this.data.type,
-					changeMatrixMode:   'modelViewMatrix',
-					barcodeValue:       _this.data.barcodeValue,
-					markersAreaEnabled: false
-				}
+				
 			}else if( _this.data.preset === 'custom' ){
    				arProfile.defaultMarkerParameters.type = 'pattern'
    				arProfile.defaultMarkerParameters.patternUrl = _this.data.patternUrl;
-   				arProfile.defaultMarkerParameters.markersAreaEnabled = false
+   				arProfile.defaultMarkerParameters.markersAreaEnabled = false	
+				
+				
+			//}else if( _this.data.type === 'barcode' ){
+			//	markerParameters = {
+			//		type:               _this.data.type,
+			//		changeMatrixMode:   'modelViewMatrix',
+			//		barcodeValue:       _this.data.barcodeValue,
+			//		markersAreaEnabled: false
+			//	
+			//	}
 			
 			
-			}else if( _this.data.type === 'pattern' ){
-				markerParameters.type = _this.data.type
-				markerParameters.patternUrl = _this.data.patternUrl;
-				markerParameters.markersAreaEnabled = false
+			//}else if( _this.data.type === 'pattern' ){
+			//	markerParameters.type = _this.data.type
+			//	markerParameters.patternUrl = _this.data.patternUrl;
+			//	markerParameters.markersAreaEnabled = false
 			}else {
 				// console.assert( this.data.preset === '', 'illegal preset value '+this.data.preset)
 			}
