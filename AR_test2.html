@@ -4,13 +4,44 @@
 <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"> </script>
   <body style='margin : 0px; overflow: hidden;'>
-    <a-scene stats embedded arjs='trackingMethod: best;'>
+    <a-scene>
       <!--<a-marker preset="hiro">-->
       <a-marker-camera preset='custom' type='pattern' url="https://raw.githubusercontent.com/kmarie12/kmarie12.github.io/master/pattern-marker_leaf.patt"></a-marker-camera>
-      <a-box position='0 1 0' material='color: blue;'>
-      </a-box>
-      </a-marker>
+      <!--<a-box position='0 1 0' material='color: blue;'>
+      </a-box>-->
+      <a-assets>
+      <!--<a-video url="https://www.youtube.com/watch?v=UbxUSsFXYo4&start_radio=1&list=RDUbxUSsFXYo4"></a-video>-->
+      
+      <video id="video" autoplay loop="true" src="video/JustALine_HQ.mp4"></video>
+  </a-assets>
+
+  
+  <a-video src="#video" width="16" height="9" position="0 0 -20"></a-video>
+      
+    <!--<video id="trillium-bloom" autoplay loop="true" src="https://vimeo.com/user94181622/review/312638249/fc8e37bede"></video>
+    
+    https://www.youtube.com/watch?v=UbxUSsFXYo4&start_radio=1&list=RDUbxUSsFXYo4-->
+  
+     
+   
+     
       <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
+
+
+
+
+<!--<a-scene>
+  <a-assets>
+   https://vimeo.com/user94181622/review/312638249/fc8e37bede
+    <video id="penguin-sledding" autoplay loop="true" src="penguin-sledding.mp4"></video>
+  </a-assets>
+
+  
+  <a-video src="#penguin-sledding" width="16" height="9" position="0 0 -20"></a-video>
+
+  
+  <a-video src="airbending.mp4"></a-video>
+</a-scene> -->
