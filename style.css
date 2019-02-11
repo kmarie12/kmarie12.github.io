@@ -30,6 +30,18 @@ html, body{
     bottom: 30px;
     left: calc(50% - 100px);
 }
+img{
+	background-color: transparent;
+	border: none;
+}
+#video_overlays {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 960px;
+  height: 720px;
+  z-index: 100;
+}
 .taken{
     height: 100px!important;
     width: 100px!important;
