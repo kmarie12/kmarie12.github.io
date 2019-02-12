@@ -50,6 +50,8 @@ img{
   #video_overlays  {
 
     height: 100vw;
+	
+	top: 20%;
 
     -webkit-transform: rotate(90deg);
 
@@ -63,7 +65,13 @@ img{
 
   }
   #camera--trigger {
-
+	top: calc(50% - 100px);
+	left: 10px;
+	height: 40px;
+	width: 100px;
+	font-size: 12px;
+	padding: 5px 5px;
+	
     -webkit-transform: rotate(90deg);
 
     /*-moz-transform: rotate(90deg);
