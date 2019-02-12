@@ -31,7 +31,7 @@ html, body{
 img{
 	background-color: transparent;
 	border: none;
-	height: 90%;
+	/*height: 90%;*/
 }
 #video_overlays {
  position: fixed;
@@ -43,18 +43,29 @@ img{
   max-height: 95vh;
   z-index: 100;
 }
-@media screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 2) 
-  and (orientation: landscape) {
-	  #video_overlays{
-		  position:fixed;
-		  top: 0;
-		  bottom: 0%;
-		  max-height: 600px;
-		  z-index: 100;
-	  }
+#camera{ display:block;}
+	
+@media only screen and (orientation:portrait){
+
+  #camera {
+
+    height: 100vw;
+
+    -webkit-transform: rotate(90deg);
+
+    -moz-transform: rotate(90deg);
+
+    -o-transform: rotate(90deg);
+
+    -ms-transform: rotate(90deg);
+
+    transform: rotate(90deg);
+
+  }
+
+}
+
+
 }
 .taken{
     height: 100px!important;
