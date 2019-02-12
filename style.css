@@ -33,7 +33,7 @@ img{
 	border: none;
 }
 #video_overlays {
- position: absolute;
+ position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -46,10 +46,10 @@ img{
   and (-webkit-device-pixel-ratio: 2) 
   and (orientation: landscape) {
 	  #video_overlays{
-		  position:absolute;
+		  position:fixed;
 		  top: 10%;
 		  bottom: 10%;
-		  height: 100%;
+		  max-height: 90%;
 		  z-index: 100;
 	  }
 }
