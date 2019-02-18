@@ -27,7 +27,7 @@ function cameraStart() {
 //    cameraOutput.classList.add("taken");
 //};
 
-var n = 0;
+var n = 1;
 
 function changeImage() {
   if ( n == 0 ) {
@@ -36,12 +36,12 @@ function changeImage() {
   }
   else if ( n == 1 ) {
     document.images["image"].src = "img/AltFuture.png";
-    n = 2;
-  }
-  else {
-    document.images["image"].src = "img/Building_white.png";
     n = 0;
   }
+  // else {
+  //  document.images["image"].src = "img/AltFuture.png";
+  //  n = 0;
+ // }
 }
 
 // Start the video stream when the window loads
