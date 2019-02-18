@@ -31,7 +31,7 @@ var n = 1;
 
 function changeImage() {
   if ( n == 0 ) {
-    document.images["image"].src = "img/Building_white.png";
+    document.images["image"].src = "img/Site_Boylston.png";
     n = 1;
   }
   else if ( n == 1 ) {
