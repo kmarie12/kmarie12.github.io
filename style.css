@@ -127,7 +127,9 @@ img{
 	padding: 5px 5px;
 	
 }
-
+	img{
+		left: 5%;
+	}
 
 }
 .taken{
