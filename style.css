@@ -31,9 +31,9 @@ html, body{
     background-color: black;
     color: white;
     font-size: 16px;
-    border-radius: 30px;
+    border-radius: 50px;
     border: none;
-    padding: 15px 20px;
+    padding: 15px 15px;
     text-align: center;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
     position: absolute;
@@ -78,10 +78,10 @@ img{
 
   }
   #camera--trigger {
-	/*top: calc(50% - 100px);
-	left: 10px;*/
-	height: 40px;
-	width: 100px;
+	top: -10%;
+	
+	height: 80px;
+	width: 80px;
 	font-size: 12px;
 	padding: 5px 5px;
 	
@@ -119,10 +119,10 @@ img{
 
   }
   #camera--trigger {
-	left: calc(50% - 50px);
-	bottom: 5%;
-	height: 40px;
-	width: 100px;
+	left: -5%;
+	bottom: 20%;
+	height: 80px;
+	width: 80px;
 	font-size: 12px;
 	padding: 5px 5px;
 	
