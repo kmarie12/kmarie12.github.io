@@ -79,7 +79,7 @@ img{
   }
   #camera--trigger {
 	top: 40%;
-	left: -25%;
+	right: 40%;
 	height: 80px;
 	width: 80px;
 	font-size: 12px;
