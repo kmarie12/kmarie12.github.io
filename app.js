@@ -34,8 +34,8 @@ function changeImage() {
     document.images["image"].src = "img/Site_Boylston.png";
     n = 1;
   }
-  else if ( n == 1 ) {
-    document.images["image"].src = "img/AltFuture.png";
+  else if ( n == 1 ) 
+    document.images["image"].src = "img/NewBoylston.png";
     n = 0;
   }
   // else {
