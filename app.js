@@ -31,7 +31,7 @@ var n = 1;
 
 function changeImage() {
   if ( n == 0 ) {
-    document.images["image"].src = "img/Site_Boylston.png";
+    document.images["image"].src = "img/TimeTravel_sketches.gif";
     n = 1;
   }
   else if ( n == 1 ) {
