@@ -47,7 +47,7 @@ img{
 	/*height: 90%;*/
 }
 #video_overlays {
- position: relative;
+ position: absolute;
   top: 0;
   bottom: 5%;
   left: 0;
@@ -60,6 +60,8 @@ img{
 #form{
 	position:relative;
 	top: 20%;
+	width: 80%;
+	left: 45%;
 	
 }
 
