@@ -133,7 +133,7 @@ img{
 
   }
   #camera--trigger {
-	left: 20%;
+	left: -20%;
 	top: 40%;
 	height: 80px;
 	width: 80px;
@@ -148,7 +148,7 @@ img{
 	#form{
 	
 	position:relative;
-	top: 300px;
+	top: 400px;
 	width: 70%;
 	
 	-webkit-transform: rotate(0deg);
