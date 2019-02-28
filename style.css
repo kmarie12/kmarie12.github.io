@@ -36,7 +36,7 @@ html, body{
     padding: 15px 15px;
     text-align: center;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
-    position: absolute;
+    position: relative;
     bottom: 30px;
     left: calc(50% - 100px);
 	z-index: 200;
@@ -47,7 +47,7 @@ img{
 	/*height: 90%;*/
 }
 #video_overlays {
- position: absolute;
+ position: relative;
   top: 0;
   bottom: 5%;
   left: 0;
@@ -57,10 +57,16 @@ img{
   z-index: 150;
 }
 
+#form{
+	position:relative;
+	top: 20%;
+	
+}
+
 
 @media only screen and (orientation:portrait){
 
-  #video_overlays  {
+  #video_overlays {
 
     height: 100vw;
 	
@@ -84,18 +90,19 @@ img{
 	width: 80px;
 	font-size: 12px;
 	padding: 5px 5px;
-	
-    /*-webkit-transform: rotate(90deg);
 
-    /*-moz-transform: rotate(90deg);
+  }
+  #form
+	-webkit-transform: rotate(90deg);
+
+    -moz-transform: rotate(90deg);
 
     -o-transform: rotate(90deg);
 
     -ms-transform: rotate(90deg);
 
-    transform: rotate(90deg);*/
+    transform: rotate(90deg);
 
-  }
 
 }
 
