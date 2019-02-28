@@ -35,7 +35,7 @@ function changeImage() {
     n = 1;
   }
   else if ( n == 1 ) {
-    document.images["image"].src = "img/NewBoylston.png";
+    document.images["image"].src = "img/NewBoylston2.gif";
     n = 0;
   }
   // else {
