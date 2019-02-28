@@ -60,7 +60,7 @@ img{
 #form{
 	position:relative;
 	top: 800px;
-	width: 80%;
+	width: 70%;
 	
 	z-index: 200;
 	
@@ -95,7 +95,11 @@ img{
 	padding: 5px 5px;
 
   }
-  #form
+	#form{
+	
+	position:relative;
+	top: 700px;
+	width: 70%;
 	-webkit-transform: rotate(90deg);
 
     -moz-transform: rotate(90deg);
@@ -106,7 +110,7 @@ img{
 
     transform: rotate(90deg);
 
-
+	}
 }
 
 @media only screen and (orientation:landscape){
@@ -114,7 +118,7 @@ img{
   #video_overlays  {
 
     width: 50%;
-	left: -20%;
+	left: 20%;
 	top: 5%;
 
      -webkit-transform: rotate(0deg);
