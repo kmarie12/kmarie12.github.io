@@ -29,8 +29,8 @@ html, body{
 
 #camera--trigger{
     width: 200px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     font-size: 16px;
     border-radius: 50px;
     border: none;
@@ -176,10 +176,10 @@ img{
 	}
 	#questions{
 		width: 90%;
-		padding-left: 10%;
+		
 	}
 	#carrot{
-		padding-left: 45%;
+		
 		padding-top: 60px;
 		padding-bottom: 60px;
 		
