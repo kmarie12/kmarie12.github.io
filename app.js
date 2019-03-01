@@ -31,11 +31,11 @@ var n = 1;
 
 function changeImage() {
   if ( n == 0 ) {
-    document.images["image"].src = "img/OldBoylston47.gif";
+    document.images["home"].src = "img/OldBoylston47.gif";
     n = 1;
   }
   else if ( n == 1 ) {
-    document.images["image"].src = "img/NewBoylston4.gif";
+    document.images["home"].src = "img/NewBoylston4.gif";
     n = 0;
   }
   // else {
