@@ -137,7 +137,7 @@ img{
   #video_overlays  {
 
     width: 100%;
-	  top: 10%;
+	  top: 5%;
 	  left: 30%;
 	
 	padding-bottom: 50px;
@@ -150,7 +150,7 @@ img{
 	}
 
   #camera--trigger {
-	left: 10%;
+	left: 15%;
 	top: -40%;
 	height: 80px;
 	width: 80px;
@@ -167,7 +167,7 @@ img{
 	position:relative;
 	/* top: 350px;*/
 	top: 200px;
-	padding-left: 40%;	
+		
 	align-content: center;
 		
 	
