@@ -88,7 +88,7 @@ img{
   }
   #camera--trigger {
 	top: 40%;
-	left: -20%;
+	left: -10%;
 	height: 80px;
 	width: 80px;
 	font-size: 12px;
@@ -117,7 +117,7 @@ img{
 
   #video_overlays  {
 
-    width: 50%;
+    width: 60%;
 	left: 20%;
 	top: 5%;
 
@@ -148,8 +148,8 @@ img{
 	#form{
 	
 	position:relative;
-	top: 400px;
-	width: 70%;
+	top: 300px;
+	width: 90%;
 	
 	-webkit-transform: rotate(0deg);
 
