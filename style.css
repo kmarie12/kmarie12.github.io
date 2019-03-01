@@ -164,6 +164,7 @@ img{
 	
 	#form{
 	width: 100%;
+	padding-left: 25%;
 	position:relative;
 	/* top: 350px;*/
 	top: 200px;
@@ -174,10 +175,11 @@ img{
 		
 	}
 	#questions{
-		width: 70%;
+		width: 90%;
+		padding-left: 10%;
 	}
 	#carrot{
-		padding-left: 28%;
+		padding-left: 45%;
 		padding-top: 60px;
 		padding-bottom: 60px;
 		
