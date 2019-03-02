@@ -150,7 +150,7 @@ img{
 	}
 
   #camera--trigger {
-	left: 15%;
+	left: 10%;
 	top: -40%;
 	height: 80px;
 	width: 80px;
@@ -167,7 +167,7 @@ img{
 	padding-left: 25%;
 	position:relative;
 	/* top: 350px;*/
-	padding-top: 200px;
+	padding-top: 60px;
 		
 	align-content: center;
 		
@@ -179,7 +179,7 @@ img{
 		
 	}
 	#carrot{
-		padding-left: 30%;
+		padding-left: 20%;
 		padding-top: 60px;
 		padding-bottom: 60px;
 		
